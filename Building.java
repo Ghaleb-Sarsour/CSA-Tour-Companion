@@ -1,5 +1,4 @@
 public class Building {
-    
     //Creating each floor in public class Building {
     private int[][] floor1;
     private int[][] floor2;
@@ -46,7 +45,6 @@ public class Building {
     public int getY(){
         return y + 1;
     }
-    
 
 }
 
