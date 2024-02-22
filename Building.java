@@ -4,6 +4,10 @@ public class Building {
     private int[][] floor1;
     private int[][] floor2;
     private int[][] floor3;
+
+    //Location
+    private int x;
+    private int y;
     
     //Constructor creating object 
     public Building(int[][] floor1, int[][] floor2, int[][] floor3){
@@ -21,6 +25,26 @@ public class Building {
                 counter++;
             }
         }
+    }
+
+    //Find coordinate of room
+    public void setLocation(int[][] floor, int room){
+        for(int i = 0; i < floor.length; i++){
+            for(int j = 0; j < floor[i].length; j++){
+                if(floor[i][j] == room){
+                    x = j;
+                    y = i;
+                }
+            }
+        }
+    }
+
+    //Getting coordinates
+    public int getX(){
+        return x + 1;
+    }
+    public int getY(){
+        return y + 1;
     }
     
 

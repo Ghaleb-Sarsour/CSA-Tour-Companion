@@ -9,7 +9,7 @@ public class mainClass {
 
         //list of rooms on each floor
         int[] floor1rooms = {188, 184, 184, 0, 0, 0, 118, 172, 174, 192, 188, 188, 184, 0, 0, 0, 0, 0, 173, 191, 0, 1000, 1000, 1000, 1000, 144, 110, 2000, 113, 0, 189, 187, 183, 181, 0, 124, 122, 0, 0, 0, 189, 187, 0, 181, 145, 123, 121, 0, 0, 152, 0, 0, 0, 0, 147, 144, 0, 0, 0, 158, 0, 0, 0, 0, 147, 146, 0, 0, 0, 158};
-        int[] floor2rooms = {};
+        int[] floor2rooms = {283, 281, 267, 265, 263, 0, 272, 274, 0, 292, 294, 284, 282, 268, 264, 0, 0, 273, 275, 277, 291, 293, 0, 0, 0, 0, 0, 210, 210, 210 ,210, 0, 0, 0, 0, 0, 224, 0, 0, 232, 236, 236, 252, 0, 0, 0, 0, 223, 0, 0, 233, 235, 251, 252, 0, 0, 0, 242, 0, 0, 0, 0, 0, 0, 0, 0, 0, 249, 244, 0, 0, 0, 0, 0, 253, 258, 0, 0, 249, 246, 0, 0, 0, 0, 0, 253, 258, 0};
         int[] floor3rooms = {};
 
         //Creating Object 
@@ -17,13 +17,7 @@ public class mainClass {
 
         //Creating Floor 
         IA.setFloor(floor1, floor1rooms);
-        
-        for(int i = 0; i < floor1.length; i++){
-            for(int j = 0; j < floor1[i].length; j++){
-                System.out.print(floor1[i][j] + " ");
-            }
-            System.out.println(" ");
-        }
+        IA.setFloor(floor2, floor2rooms);
 
     }
 }
