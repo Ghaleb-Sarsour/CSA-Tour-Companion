@@ -23,5 +23,6 @@ public class chara{
     public int getZloc(){
         return zloc;
     }
-
+    
+    
 }
