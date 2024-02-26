@@ -14,7 +14,7 @@ public class mainClass {
 
         //Creating Object 
         Building IA = new Building(floor1, floor2, floor3);
-        chara user = new chara(0, 0, 1);
+        chara user = new chara();
         //Creating Floor 
         IA.setFloor(floor1, floor1rooms);
         IA.setFloor(floor2, floor2rooms);
