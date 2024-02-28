@@ -29,6 +29,10 @@ public class mainClass {
         ArrayList<classroom> classes = new ArrayList<classroom>();
         classes.add(IA188);
         //Main Area:
+
+        
+        boolean exit = false;
+    do{
         Scanner console = new Scanner(System.in);
         System.out.println("You are currently at: " + user.getXloc() + " " + user.getYloc() + " " + user.getZloc());
         System.out.println("Where do you want to go?");
@@ -66,9 +70,23 @@ public class mainClass {
                 else if (y < 0){
                     System.out.println("Move backward " + Math.abs(y) + " moves");
                 }
+                user.setXloc(i.getXloc());
+                user.setYloc(i.getYloc());
+                user.setZloc(i.getZloc());
             }
         }
+        Scanner console2 = new Scanner(System.in);
+        System.out.print("Do you want to exit? (y/n): ");
+        String exitChoice = console2.nextLine();
 
+        if(exitChoice.equalsIgnoreCase("y") || exitChoice.equalsIgnoreCase("yes")){
+            exit = true;
+        }
+        else{
+            exit = false;
+        }
+
+    }while(!exit);
 
     }
 }
