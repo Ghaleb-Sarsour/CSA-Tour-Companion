@@ -13,6 +13,11 @@ public class chara{
         
     }
 
+    public chara(int xloc, int yloc, int zloc){
+        this.xloc = xloc;
+        this.yloc = yloc;
+    }
+
     //Getters 
     public int getXloc(){
         return xloc;

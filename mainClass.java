@@ -23,6 +23,6 @@ public class mainClass {
 
         //Creating Classrooms
         classroom IA188 = new classroom(188, -6, 2, "rand teacher", "office",  "This is a cool office igess");
-
+        
     }
 }
