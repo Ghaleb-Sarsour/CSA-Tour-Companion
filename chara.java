@@ -10,12 +10,6 @@ public class chara{
         xloc = 0;
         yloc = 0;
         zloc = 0;
-        
-    }
-
-    public chara(int xloc, int yloc, int zloc){
-        this.xloc = xloc;
-        this.yloc = yloc;
     }
 
     //Getters 
@@ -29,5 +23,14 @@ public class chara{
         return zloc;
     }
     
-    
+    //Setters
+    public void setXloc(int xloc){
+        this.xloc = xloc;
+    }
+    public void setYloc(int yloc){
+        this.yloc = yloc;
+    }
+    public void setZloc(int zloc){
+        this.zloc = zloc;
+    }
 }

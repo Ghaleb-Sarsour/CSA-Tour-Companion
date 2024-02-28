@@ -1,7 +1,8 @@
+import java.util.*;
+
 public class mainClass {
-
     public static void main(String[] args){
-
+        
         //Creating all 3 floors
         int[][] floor1 = new int[7][10];
         int[][] floor2 = new int[8][11];
@@ -15,14 +16,59 @@ public class mainClass {
         //Creating Object 
         Building IA = new Building(floor1, floor2, floor3);
         chara user = new chara();
+        user.setZloc(3);
         
         //Creating Floor 
         IA.setFloor(floor1, floor1rooms);
         IA.setFloor(floor2, floor2rooms);
         IA.setFloor(floor3, floor3rooms);
 
-        //Creating Classrooms
-        classroom IA188 = new classroom(188, -6, 2, "rand teacher", "office",  "This is a cool office igess");
-        
+        //Creating Classrooms:
+        classroom IA188 = new classroom(188, -6, 2, 1, "rand teacher", "IA188",  "This is a cool office igess");
+
+        ArrayList<classroom> classes = new ArrayList<classroom>();
+        classes.add(IA188);
+        //Main Area:
+        Scanner console = new Scanner(System.in);
+        System.out.println("You are currently at: " + user.getXloc() + " " + user.getYloc() + " " + user.getZloc());
+        System.out.println("Where do you want to go?");
+        int room = console.nextInt();
+
+        for(classroom i : classes){
+            if(i.getNumber() == room){
+                System.out.println(i.getName());
+
+                //Finding Zloc
+                int z = i.getZloc() - user.getZloc();
+                if (z > 0){
+                    System.out.println("Move up " + z + " floors");
+                }
+                
+                else if (z < 0){
+                    System.out.println("Move down " + Math.abs(z) + " floors");
+                }
+
+                //Finding Xloc
+                int x = i.getXloc() - user.getXloc();
+                if (x > 0){
+                    System.out.println("Move right " + x + " moves.");
+                }
+
+                else if (x < 0){
+                    System.out.println("Move left " + Math.abs(x) + " moves");
+                }
+                
+                //Finding Yloc
+                int y = i.getYloc() - user.getYloc();
+                if (y > 0){
+                    System.out.println("Move forward " + y + " moves");
+                }
+                else if (y < 0){
+                    System.out.println("Move backward " + Math.abs(y) + " moves");
+                }
+            }
+        }
+
+
     }
 }
