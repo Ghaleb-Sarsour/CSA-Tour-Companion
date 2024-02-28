@@ -15,10 +15,14 @@ public class mainClass {
         //Creating Object 
         Building IA = new Building(floor1, floor2, floor3);
         chara user = new chara();
+        
         //Creating Floor 
         IA.setFloor(floor1, floor1rooms);
         IA.setFloor(floor2, floor2rooms);
         IA.setFloor(floor3, floor3rooms);
+
+        //Creating Classrooms
+        classroom IA188 = new classroom(188, -6, 2, "rand teacher", "office",  "This is a cool office igess");
 
     }
 }
