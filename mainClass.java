@@ -42,6 +42,10 @@ public class mainClass {
             if(i.getNumber() == room){
                 System.out.println(i.getName());
 
+                if(i.getZloc() == user.getZloc() && i.getYloc() == user.getYloc() && i.getXloc() == user.getXloc()){
+                    System.out.println("You are already in this room.");
+                }
+                else{
                 //Finding Zloc
                 int z = i.getZloc() - user.getZloc();
                 if (z > 0){
@@ -74,6 +78,7 @@ public class mainClass {
                 user.setYloc(i.getYloc());
                 user.setZloc(i.getZloc());
             }
+        }
         }
         Scanner console2 = new Scanner(System.in);
         System.out.print("Do you want to exit? (y/n): ");
