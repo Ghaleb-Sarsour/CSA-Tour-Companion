@@ -1,56 +1,41 @@
-import java.util.ArrayList;
+class Classroom{
+    private int roomNumber;
+    private int floor;
+    private String teacher;
+    private int xCoordinate;
+    private int yCoordinate;
+    private String description;
 
-public class classroom {
-   private int number;
-   private String name;
-   private int x;
-   private int y;
-   private int z;
-   private String teacher;
-   private String descript;
-   private ArrayList<classObjects> objects; 
-
-
-    public classroom(int number, int x, int y, int z, String teacher, String name, String descript){
-        this.number = number;
-        this.x = x;
-        this.y = y;
-        this.z = z;
+    public Classroom(int roomNumber, int floor, String teacher, int xCoordinate, int yCoordinate, String description){
+        this.roomNumber = roomNumber;
+        this.floor = floor;
         this.teacher = teacher;
-        this.name = name;
-        this.descript = descript;
-        this.objects = new ArrayList<classObjects>();
-}
+        this.xCoordinate = xCoordinate;
+        this.yCoordinate = yCoordinate;
+        this.description = description;
+    }
 
-    //Getters
-    public int getNumber(){
-        return number;
+    public int getRoomNum(){
+        return roomNumber;
     }
-    public int getXloc(){
-        return x;
+
+    public int getFloor(){
+        return floor;
     }
-    public int getYloc(){
-        return y;
-    }
-    public int getZloc(){
-        return z;
-    }
+
     public String getTeacher(){
         return teacher;
     }
-    public String getDescript(){
-        return descript;
-    }
-    public String getName(){
-        return name;
-    }
-    public ArrayList<classObjects> getObjects(){
-        return objects;
+
+    public int getX(){
+        return xCoordinate;
     }
 
-    //adders
-   public void addObject(classObjects object){
-        objects.add(object);
-   } 
+    public int getY(){
+        return yCoordinate;
+    }
 
+    public String getDescription(){
+        return description;
+    }
 }
