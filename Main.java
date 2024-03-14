@@ -5,52 +5,52 @@ public class Main{
         //1st floor rooms
         Classroom room1881 = new Classroom(188, 1, "Denato", -6, 2, "Engineeering Room");
         Classroom room1841 = new Classroom(184, 1, "Dr. P", -5, 2, "Engineeering Room");
-        Classroom room1842 = new Classroom(184, 1, "", -4, 2, "Woodshop");
-        Classroom musicTech = new Classroom(118, 1, "", 0, 2, "Music Technology Room");
+        Classroom room1842 = new Classroom(184, 1, "Dr. P", -4, 2, "Woodshop");
+        Classroom musicTech = new Classroom(118, 1, "McCown and Vu", 0, 2, "Music Technology Room");
         Classroom room172 = new Classroom(172, 1, "", 1, 2, "Classroom");
-        Classroom room174 = new Classroom(174, 1, "", 2, 2, "Classroom");
-        Classroom visArtLab = new Classroom(192, 1, "", 3, 2, "Visual Arts Lab");
+        Classroom room174 = new Classroom(174, 1, "Mr. Hizny", 2, 2, "Classroom");
+        Classroom visArtLab = new Classroom(192, 1, "Reid", 3, 2, "Visual Arts Lab");
         Classroom room1882 = new Classroom(188, 1, "Denato", -6, 1, "Engineering Classroom");
-        Classroom room1883 = new Classroom(188, 1, "", -5, 1, "3-D Printing Lab");
+        Classroom room1883 = new Classroom(188, 1, "Denato", -5, 1, "3-D Printing Lab");
         Classroom room1843 = new Classroom(184, 1, "Dr. P", -4, 1, "Engineering Room");
         Classroom room173 = new Classroom(173, 1, "", 2, 1, "Career Center");
-        Classroom room191 = new Classroom(191, 1, "", 3, 1, "Media Arts Lab");
-        Classroom launchpad1 = new Classroom(190, 1, "", -5, 0, "Launchpad");
-        Classroom launchpad2 = new Classroom(190, 1, "", -4, 0, "Launchpad");
-        Classroom launchpad3 = new Classroom(190, 1, "", -3, 0, "Launchpad");
-        Classroom launchpad4 = new Classroom(190, 1, "", -2, 0, "Launchpad");
+        Classroom room191 = new Classroom(191, 1, "Ms. Garth", 3, 1, "Media Arts Lab");
+        Classroom launchpad1 = new Classroom(190, 1, "none", -5, 0, "Launchpad");
+        Classroom launchpad2 = new Classroom(190, 1, "none", -4, 0, "Launchpad");
+        Classroom launchpad3 = new Classroom(190, 1, "none", -3, 0, "Launchpad");
+        Classroom launchpad4 = new Classroom(190, 1, "none", -2, 0, "Launchpad");
         Classroom hangar1 = new Classroom(144, 1, "none", -1, 0, "Hangar/cafeteria");
-        Classroom gamingPod = new Classroom(110, 1, "", 0, 0, "Gaming Pod");
-        Classroom hangar2 = new Classroom(113, 1, "", 1, 0, "Hangar/Cafeteria");
-        Classroom hangar3 = new Classroom(113, 1, "", 2, 0, "Hangar/Cafeteria");
-        Classroom room1891 = new Classroom(189, 1, "Reid", -6, -1, "Engineering Room");
-        Classroom room1871 = new Classroom(187, 1, "", -5, -1, "Metal Working Lab");
-        Classroom room183 = new Classroom(183, 1, "", -4, -1, "Engineering Room");
-        Classroom room1811 = new Classroom(181, 1, "", -3, -1, "Engineering Room");
+        Classroom gamingPod = new Classroom(110, 1, "none", 0, 0, "Gaming Pod");
+        Classroom hangar2 = new Classroom(113, 1, "none", 1, 0, "Hangar/Cafeteria");
+        Classroom hangar3 = new Classroom(113, 1, "none", 2, 0, "Hangar/Cafeteria");
+        Classroom room1891 = new Classroom(189, 1, "Huntley", -6, -1, "Engineering Room");
+        Classroom room1871 = new Classroom(187, 1, "Huntley", -5, -1, "Metal Working Lab");
+        Classroom room183 = new Classroom(183, 1, "Huntley", -4, -1, "Engineering Room");
+        Classroom room1811 = new Classroom(181, 1, "Reid", -3, -1, "Engineering Room");
         Classroom room124 = new Classroom(124, 1, "", -1, -1, "Classroom");
-        Classroom room122 = new Classroom(122, 1, "", 0, -1, "Lecture Hall");
+        Classroom room122 = new Classroom(122, 1, "none", 0, -1, "Lecture Hall");
         Classroom room1892 = new Classroom(189, 1, "Reid", -6, -2, "Engineering Room");
         Classroom room1872 = new Classroom(187, 1, "", -5, -2, "Engineering Room");
         Classroom room1812 = new Classroom(181, 1, "", -3, -2, "Engineering Room");
         Classroom room145 = new Classroom(145, 1, "", -2, -2, "Lab");
-        Classroom room123 = new Classroom(123, 1, "", -1, -2, "Classroom");
-        Classroom room121 = new Classroom(121, 1, "", 0, -2, "Classroom");
-        Classroom fitnessRoom = new Classroom(152, 1, "", 3, -2, "Fitness Room");
-        Classroom room1471 = new Classroom(147, 1, "", -2, -3, "Lab");
-        Classroom room144 = new Classroom(144, 1, "", -1, -3, "Classroom");
-        Classroom fitnessRoom2 = new Classroom(158, 1, "", 3, -3, "Fitness Room");
-        Classroom room1472 = new Classroom(147, 1, "", -2, -4, "Lab");
-        Classroom room146 = new Classroom(146, 1, "", -1, -4, "Lab");
-        Classroom fitnessRoom3 = new Classroom(158, 1, "", 3, -4, "Fitness Room");
+        Classroom room123 = new Classroom(123, 1, "Ms. Curry", -1, -2, "Classroom");
+        Classroom room121 = new Classroom(121, 1, "Mr. Pomerance", 0, -2, "Classroom");
+        Classroom fitnessRoom = new Classroom(152, 1, "none", 3, -2, "Fitness Room");
+        Classroom room1471 = new Classroom(147, 1, "Mr. Fouts", -2, -3, "Lab");
+        Classroom room144 = new Classroom(144, 1, "Ms. Cramer", -1, -3, "Classroom");
+        Classroom fitnessRoom2 = new Classroom(158, 1, "none", 3, -3, "Fitness Room");
+        Classroom room1472 = new Classroom(147, 1, "Mr. Fouts", -2, -4, "Lab");
+        Classroom room146 = new Classroom(146, 1, "Ms. Cramer", -1, -4, "Lab");
+        Classroom fitnessRoom3 = new Classroom(158, 1, "none", 3, -4, "Fitness Room");
 
         //2nd floor rooms
         Classroom room283 = new Classroom(283, 2, "", -5, 2, "Classroom");
         Classroom room281 = new Classroom(281, 2, "", -4, 2, "Classroom");
-        Classroom room267 = new Classroom(267, 2, "", -3, 2, "Classroom");
-        Classroom room265 = new Classroom(265, 2, "", -2, 2, "Classroom");
-        Classroom room263 = new Classroom(263, 2, "", -1, 2, "Classroom");
-        Classroom room272 = new Classroom(272, 2, "", 1, 2, "Classroom");
-        Classroom room274 = new Classroom(274, 2, "", 2, 2, "Classroom");
+        Classroom room267 = new Classroom(267, 2, "Mr. Lynch", -3, 2, "Classroom");
+        Classroom room265 = new Classroom(265, 2, "Mr. Proctor", -2, 2, "Classroom");
+        Classroom room263 = new Classroom(263, 2, "Ms. Velazquez", -1, 2, "Classroom");
+        Classroom room272 = new Classroom(272, 2, "Mr. Gillicuddy", 1, 2, "Classroom");
+        Classroom room274 = new Classroom(274, 2, "Mr. Sporer", 2, 2, "Classroom");
         Classroom room292 = new Classroom(292, 2, "", 4, 2, "Classroom");
         Classroom room294 = new Classroom(294, 2, "", 5, 2, "Classroom");
         Classroom room284 = new Classroom(284, 2, "", -5, 1, "Classroom");
@@ -62,26 +62,26 @@ public class Main{
         Classroom room277 = new Classroom(277, 2, "", 3, 1, "Classroom");
         Classroom room291 = new Classroom(291, 2, "", 4, 1, "Classroom");
         Classroom room293 = new Classroom(293, 2, "", 5, 1, "Classroom");
-        Classroom exchange1 = new Classroom(210, 2, "", 0, 0, "Exchange");
-        Classroom exchange2 = new Classroom(210, 2, "", 1, 0, "Exchange");
-        Classroom exchange3 = new Classroom(210, 2, "", 2, 0, "Exchange");
-        Classroom exchange4 = new Classroom(210, 2, "", 3, 0, "Exchange");
+        Classroom exchange1 = new Classroom(210, 2, "Ms. Beam", 0, 0, "Exchange");
+        Classroom exchange2 = new Classroom(210, 2, "Ms. Bean", 1, 0, "Exchange");
+        Classroom exchange3 = new Classroom(210, 2, "Ms. Beam", 2, 0, "Exchange");
+        Classroom exchange4 = new Classroom(210, 2, "Ms. Beam", 3, 0, "Exchange");
         Classroom biotechLab = new Classroom(224, 2, "Mr. Kuhn", -2, -1, "Biotech Lab");
-        Classroom makerSpace = new Classroom(232, 2, "", 1, -1, "Makerspace");
+        Classroom makerSpace = new Classroom(232, 2, "Ms. Beam", 1, -1, "Makerspace");
         Classroom gameDesign1 = new Classroom(236, 2, "Coach Heying", 2, -1, "Game Design Lab");
         Classroom gameDesign2 = new Classroom(236, 2, "Coach Heying", 3, -1, "Game Design Lab");
         Classroom networkingLab1 = new Classroom(252, 2, "Mr. Wimdann", 4, -1, "Networking Lab");
         Classroom room223 = new Classroom(223, 2, "", -2, -2, "Classroom");
-        Classroom room233 = new Classroom(233, 2, "", 1, -2, "Classroom");
+        Classroom room233 = new Classroom(233, 2, "Mr. Kuhn", 1, -2, "Classroom");
         Classroom room235 = new Classroom(235, 2, "", 2, -2, "Classroom");
-        Classroom internetOfThings = new Classroom(251, 2, "Widmann?", 3, -2, "Internet of Things");
-        Classroom networkingLab2 = new Classroom(252, 2, "Widmann?", 4, -2, "Networking Lab");
-        Classroom healthITlab = new Classroom(242, 2, "Ms. Cramer", -3, -3, "Health IT Lab");
-        Classroom surgTech1 = new Classroom(249, 2, "", -4, -4, "Surgical Tech Lab");
+        Classroom internetOfThings = new Classroom(251, 2, "Widmann", 3, -2, "Internet of Things");
+        Classroom networkingLab2 = new Classroom(252, 2, "Widmann", 4, -2, "Networking Lab");
+        Classroom healthITlab = new Classroom(242, 2, "Ms. Holmes", -3, -3, "Health IT Lab");
+        Classroom surgTech1 = new Classroom(249, 2, "Ms. Dawes", -4, -4, "Surgical Tech Lab");
         Classroom room244 = new Classroom(244, 2, "Mr. Collins", -3, -4, "Classroom");
         Classroom room2531 = new Classroom(253, 2, "", 3, -4, "IT Classroom");
         Classroom cyberLab1 = new Classroom(258, 2, "Ms. Whitlock", 4, -4, "Cyber Lab");
-        Classroom surgTech2 = new Classroom(249, 2, "", -4, -5, "Surgical Tech Lab");
+        Classroom surgTech2 = new Classroom(249, 2, "Ms. Dawes", -4, -5, "Surgical Tech Lab");
         Classroom room246 = new Classroom(246, 2, "Dr. Gingrich", -3, -5, "Classroom");
         Classroom room2532 = new Classroom(253, 2, "", 3, -5, "IT Classroom");
         Classroom room2582 = new Classroom(258, 2, "Ms. Whitlock", 4, -5, "Cyber Lab");
@@ -89,39 +89,45 @@ public class Main{
         //3rd floor rooms
         Classroom room383 = new Classroom(383, 3, "", -4, 2, "Classroom");
         Classroom room381 = new Classroom(381, 3, "", -3, 2, "Classroom");
-        Classroom room367 = new Classroom(367, 3, "", -2, 2, "Physics Lab");
-        Classroom room363 = new Classroom(363, 3, "", -1, 2, "Physics Lab");
-        Classroom northstar1 = new Classroom(372, 3, "", 1, 2, "Northstar");
-        Classroom northstar2 = new Classroom(372, 3, "", 2, 2, "Northstar");
+        Classroom room367 = new Classroom(367, 3, "Mr. Seals", -2, 2, "Physics Lab");
+        Classroom room363 = new Classroom(363, 3, "Ms. Paxton", -1, 2, "Physics Lab");
+        Classroom northstar1 = new Classroom(372, 3, "none", 1, 2, "Northstar");
+        Classroom northstar2 = new Classroom(372, 3, "none", 2, 2, "Northstar");
         Classroom room392 = new Classroom(392, 3, "", 4, 2, "Classroom");
         Classroom room394 = new Classroom(394, 3, "", 5, 2, "Classroom");
         Classroom room384 = new Classroom(384, 3, "", -4, 1, "Classroom");
         Classroom room382 = new Classroom(382, 3, "", -3, 1, "Classroom");
-        Classroom room364 = new Classroom(364, 3, "", -2, 1, "Physics Lab");
-        Classroom room362 = new Classroom(362, 3, "", -1, 1, "Classroom");
-        Classroom room373 = new Classroom(373, 3, "", 1, 1, "Classroom");
-        Classroom room375 = new Classroom(375, 3, "", 2, 1, "Classroom");
-        Classroom room377 = new Classroom(377, 3, "", 3, 1, "Classroom");
-        Classroom room391 = new Classroom(391, 3, "", 4, 1, "Classroom");
-        Classroom room393 = new Classroom(393, 3, "", 5, 1, "Classroom");
-        Classroom exchange31 = new Classroom(310, 3, "", -1, 0, "Exchange");
-        Classroom exchange32 = new Classroom(310, 3, "", 0, 0, "Exchange");
-        Classroom exchange33 = new Classroom(310, 3, "", 1, 0, "Exchange");
-        Classroom room324 = new Classroom(324, 3, "", -2, -1, "Classroom");
-        Classroom room322 = new Classroom(322, 3, "", -1, -1, "Classroom");
-        Classroom room332 = new Classroom(332, 3, "", 1, -1, "Classroom");
-        Classroom room334 = new Classroom(334, 3, "", 2, -1, "Classroom");
+        Classroom room364 = new Classroom(364, 3, "Mr. Jones", -2, 1, "Physics Lab");
+        Classroom room362 = new Classroom(362, 3, "Ms. Nilson", -1, 1, "Classroom");
+        Classroom room373 = new Classroom(373, 3, "Ms. Jones", 1, 1, "Classroom");
+        Classroom room375 = new Classroom(375, 3, "Mr. Custar", 2, 1, "Classroom");
+        Classroom room377 = new Classroom(377, 3, "Ms. Lundy", 3, 1, "Classroom");
+        Classroom room391 = new Classroom(391, 3, "Ms. Willis", 4, 1, "Classroom");
+        Classroom room393 = new Classroom(393, 3, "Dr. Gingrich", 5, 1, "Classroom");
+        Classroom exchange31 = new Classroom(310, 3, "Ms. Beam", -1, 0, "Exchange");
+        Classroom exchange32 = new Classroom(310, 3, "Ms. Beam", 0, 0, "Exchange");
+        Classroom exchange33 = new Classroom(310, 3, "Ms. Beam", 1, 0, "Exchange");
+        Classroom room324 = new Classroom(324, 3, "Mr. Clayton", -2, -1, "Classroom");
+        Classroom room322 = new Classroom(322, 3, "Ms. Rosner", -1, -1, "Classroom");
+        Classroom room332 = new Classroom(332, 3, "Ms. Callahan", 1, -1, "Classroom");
+        Classroom room334 = new Classroom(334, 3, "Mr. Bongiorno", 2, -1, "Classroom");
         Classroom room345 = new Classroom(345, 3, "Mr. Marbry", -4, -2, "Chemistry Lab");
-        Classroom room342 = new Classroom(342, 3, "Mr. Marbry", -3, -2, "Chemistry Lab");
-        Classroom extendedLearning = new Classroom(301, 3, "", 0, -2, "Extended Learning");
-        Classroom room331 = new Classroom(331, 3, "", 1, -2, "Classroom");
-        Classroom room333 = new Classroom(333, 3, "", 2, -2, "Classroom");
+        Classroom room342 = new Classroom(342, 3, "Mr. Weigand", -3, -2, "Chemistry Lab");
+        Classroom extendedLearning = new Classroom(301, 3, "Ms. Taylor", 0, -2, "Extended Learning");
+        Classroom room331 = new Classroom(331, 3, "Mr. Brown", 1, -2, "Classroom");
+        Classroom room333 = new Classroom(333, 3, "Mr. Pomerance", 2, -2, "Classroom");
         Classroom room351 = new Classroom(351, 3, "Ms. Taha", 3, -2, "Biology Lab");
         Classroom room354 = new Classroom(354, 3, "Ms. Taha", 4, -2, "Biology Lab");
-        Classroom room349 = new Classroom(349, 3, "", -4, -3, "Chemistry Lab");
+        Classroom room349 = new Classroom(349, 3, "Mr. Calhoun", -4, -3, "Chemistry Lab");
         Classroom room346 = new Classroom(346, 3, "", -3, -3, "Chemistry Lab");
         Classroom room359 = new Classroom(359, 3, "Dr. Berkemeier", 3, -3, "Biology Lab");
         Classroom room356 = new Classroom(356, 3, "Dr. Berkemeier", 4, -3, "Biology Lab");
+
+        //stairs
+        stairs stair1 = new stairs("Stair One", -3, 2, 1, -6, 2, 2, -5, 2, 3);
+        stairs stair2 = new stairs("Stair Two", 4, 2, 1, 6, 2, 2, 6, 2, 3);
+        stairs stair3 = new stairs("Stair Three", -7, -4, 1, -3, -6, 2, -3, -4, 3);
+        stairs stair4 = new stairs("Stair Four", 2, -5, 1, 3, -6, 2, 3, -4, 3);
 
         //Arraylist of classrooms
         ArrayList<Classroom> rooms = new ArrayList<Classroom>();
@@ -243,5 +249,11 @@ public class Main{
         rooms.add(room359);
         rooms.add(room356);
        
+        //Adding user
+        chara user = new chara();
+
+        //Adding Stairs
     }
+
+    //calculating POS
 }

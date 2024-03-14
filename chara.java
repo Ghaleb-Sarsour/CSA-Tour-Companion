@@ -9,7 +9,7 @@ public class chara{
     public chara(){ 
         xloc = 0;
         yloc = 0;
-        zloc = 0;
+        zloc = 1;
     }
 
     //Getters 

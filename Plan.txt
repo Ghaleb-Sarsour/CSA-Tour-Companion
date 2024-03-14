@@ -1,0 +1,60 @@
+****Calculate Position
+
+    get x,y,z for floor and player
+    set x,y,z for stairs
+    create arraylist of stairs
+    
+    if RoomX,Y,Z = Player X,Y,Z 
+        You are already at this room
+
+    if floor Z != player Z
+        get x,y,z for stairs
+        subtract x and y of each stair minus x and y for player to calculate average distance
+        set average distance of each stair
+
+        for loop finding the stair with the smallest distance
+            get average and compare it to min
+            if min < average
+                min = average
+
+        for stair i in arraylist stairs *loop comparing min to stair average*
+            if min == stair average
+                Find Xsloc = StairsX - PlayerX
+                Find Ysloc = StairX - PlayerX
+                Find StairsUP = RoomZ - PlayerZ
+
+                if Xsloc < 0
+                    You have to move + Math.abs(Xsloc) + rooms left
+                else if Xsloc > 0
+                    You have to move + Xsloc + rooms right
+                
+                if Ysloc < 0
+                    You have to move + Math.abs(Ysloc) + rooms backward
+                else if Ysloc > 0
+                    You have to move + Ysloc + rooms forward
+
+                if StairsUP < 0
+                    You have to move + Math.abs(StairsUP) + floors down to floor + RoomZ
+                else if StairsUP > 0
+                    You have to move + StairsUP + floors up to floor + RoomZ
+        
+        set player x,y,z to stair x,y,z           
+
+    Calculating x and y movement if RoomZ = PlayerZ:
+        Find Xloc = RoomX - PlayerX
+        Find Yloc = RoomY - PlayerY
+
+        If Xloc < 0
+            You have to move + Math.abs(Xloc) + rooms left
+        else if Xloc > 0
+            You have to move + Xloc + rooms left
+
+        If Yloc < 0
+            You have to move + Math.abs(Yloc) + rooms backward
+        else if Yloc > 0
+            You have to move + Yloc + rooms forward
+
+    set player x,y,z to room x,y,z
+
+
+1 object per selected room, no need to do all rooms

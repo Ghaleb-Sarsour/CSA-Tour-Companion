@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 class Classroom{
     private int roomNumber;
     private int floor;
@@ -5,6 +7,7 @@ class Classroom{
     private int xCoordinate;
     private int yCoordinate;
     private String description;
+    private ArrayList<classObjects> objects;
 
     public Classroom(int roomNumber, int floor, String teacher, int xCoordinate, int yCoordinate, String description){
         this.roomNumber = roomNumber;
@@ -13,6 +16,7 @@ class Classroom{
         this.xCoordinate = xCoordinate;
         this.yCoordinate = yCoordinate;
         this.description = description;
+        this.objects = new ArrayList<>();
     }
 
     public int getRoomNum(){
@@ -37,5 +41,13 @@ class Classroom{
 
     public String getDescription(){
         return description;
+    }
+
+    public void addObject(classObjects object){
+        objects.add(object);
+    }
+    
+    public ArrayList<classObjects> getObjects(){
+        return objects;
     }
 }
