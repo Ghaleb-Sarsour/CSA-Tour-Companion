@@ -245,6 +245,8 @@ public class Main{
        
         //Adding user
         chara user = new chara();
+
+        calcPOS(room356, user);
     }
 
     //calculating POS
@@ -278,7 +280,79 @@ public class Main{
         
         //Calculation
         else{
+            if(UserZ != RoomZ){
+                int Stair1avg = (stair1.getXS(UserZ) - UserX) + (stair1.getYS(UserZ) - UserY);
+                int Stair2avg = (stair2.getXS(UserZ) - UserX) + (stair2.getYS(UserZ) - UserY);
+                int Stair3avg = (stair3.getXS(UserZ) - UserX) + (stair3.getYS(UserZ) - UserY);
+                int Stair4avg = (stair4.getXS(UserZ) - UserX) + (stair3.getYS(UserZ) - UserY);
+                stair1.setAvg(Stair1avg);
+                stair2.setAvg(Stair2avg);
+                stair3.setAvg(Stair3avg);
+                stair4.setAvg(Stair4avg);
+                int min = 100;
+
+                for(stairs i : stairsList){
+                    if(i.getAvg() < min){
+                        min = i.getAvg();
+                    }
+                }
+                for(stairs j : stairsList){
+                    if(j.getAvg() == min){
+                        int Xsloc = j.getXS(UserZ) - UserX;
+                        int Ysloc = j.getYS(UserZ) - UserY;
+                        int StairsUp = RoomZ - UserZ;
+
+                        if(Xsloc < 0){
+                            System.out.println("You have to move " + Math.abs(Xsloc) + " rooms left.");
+                        }
+                        else if(Xsloc > 0){
+                            System.out.println("You have to move " + Math.abs(Xsloc) + " rooms right");
+                        }
+
+                        if(Ysloc < 0){
+                            System.out.println("You hav to move " + Math.abs(Ysloc) + " rooms backward");
+                        }
+                        else if(Ysloc > 0){
+                            System.out.println("You have to move " + Math.abs(Ysloc) + " rooms backward");
+                        }
+
+                        if(StairsUp < 0){
+                            System.out.println("You have to move " + Math.abs(StairsUp) + " floors down to floor " + RoomZ);
+                        }
+                        else if(StairsUp > 0){
+                            System.out.println("You have to move " + Math.abs(StairsUp) + " floors up to floor " + RoomZ);
+                        }
+                        user.setXloc(j.getXS(RoomZ));
+                        user.setYloc(j.getYS(RoomZ));
+                        user.setZloc(j.getZS(RoomZ));
+
+                        System.out.println("You are now at: " + user.getXloc() + ", " + user.getYloc() + ", " + user.getZloc());
+                    }
+                }
+            }
+
+            int Xloc = RoomX - UserX;
+            int Yloc = RoomY - UserY;
+
+            if(Xloc < 0){
+                System.out.println("You have to move " + Math.abs(Xloc) + " rooms left");
+            }
+            else if(Xloc > 0){
+                System.out.println("You have to move " + Math.abs(Xloc) + " rooms right");
+            }
+
+            if(Yloc < 0 ){
+                System.out.println("You have to move " + Math.abs(Yloc) + " rooms backward");
+            }
+            else if(Yloc > 0){
+                System.out.println("You have to move " + Math.abs(Yloc) + " rooms forward");
+            }
             
+            user.setXloc(RoomX);
+            user.setYloc(RoomY);
+            user.setZloc(RoomZ);
+            System.out.println("You are now at: " + user.getXloc() + ", " + user.getYloc() + ", " + user.getZloc());
+
         }
 
     }
