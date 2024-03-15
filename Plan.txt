@@ -1,8 +1,8 @@
 ****Calculate Position
 
-    get x,y,z for floor and player
-    set x,y,z for stairs
-    create arraylist of stairs
+    //get x,y,z for floor and player
+    //set x,y,z for stairs
+    //create arraylist of stairs
     
     if RoomX,Y,Z = Player X,Y,Z 
         You are already at this room

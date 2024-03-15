@@ -123,12 +123,6 @@ public class Main{
         Classroom room359 = new Classroom(359, 3, "Dr. Berkemeier", 3, -3, "Biology Lab");
         Classroom room356 = new Classroom(356, 3, "Dr. Berkemeier", 4, -3, "Biology Lab");
 
-        //stairs
-        stairs stair1 = new stairs("Stair One", -3, 2, 1, -6, 2, 2, -5, 2, 3);
-        stairs stair2 = new stairs("Stair Two", 4, 2, 1, 6, 2, 2, 6, 2, 3);
-        stairs stair3 = new stairs("Stair Three", -7, -4, 1, -3, -6, 2, -3, -4, 3);
-        stairs stair4 = new stairs("Stair Four", 2, -5, 1, 3, -6, 2, 3, -4, 3);
-
         //Arraylist of classrooms
         ArrayList<Classroom> rooms = new ArrayList<Classroom>();
         rooms.add(room1881);
@@ -251,9 +245,42 @@ public class Main{
        
         //Adding user
         chara user = new chara();
-
-        //Adding Stairs
     }
 
     //calculating POS
-}
+    public static void calcPOS(Classroom room, chara user){
+
+        //Setting Stairs
+        stairs stair1 = new stairs("Stair One", -3, 2, 1, -6, 2, 2, -5, 2, 3);
+        stairs stair2 = new stairs("Stair Two", 4, 2, 1, 6, 2, 2, 6, 2, 3);
+        stairs stair3 = new stairs("Stair Three", -7, -4, 1, -3, -6, 2, -3, -4, 3);
+        stairs stair4 = new stairs("Stair Four", 2, -5, 1, 3, -6, 2, 3, -4, 3);
+        ArrayList<stairs> stairsList = new ArrayList<stairs>();
+        stairsList.add(stair1);
+        stairsList.add(stair2);
+        stairsList.add(stair3);
+        stairsList.add(stair4);
+
+        //Getting User X,Y,Z
+        int UserX = user.getXloc();
+        int UserY = user.getYloc();
+        int UserZ = user.getZloc();
+
+        //Getting Room X,Y,Z
+        int RoomX = room.getX();
+        int RoomY = room.getY();
+        int RoomZ = room.getFloor();
+
+        //Checking if user is already in room
+        if(UserX == RoomX && UserY == RoomY && UserZ == RoomZ){
+            System.out.println("You are already in this room.");
+        }
+        
+        //Calculation
+        else{
+            
+        }
+
+    }
+}   
+
