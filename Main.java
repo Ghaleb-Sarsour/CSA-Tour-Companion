@@ -325,6 +325,9 @@ public class Main{
                         user.setXloc(j.getXS(RoomZ));
                         user.setYloc(j.getYS(RoomZ));
                         user.setZloc(j.getZS(RoomZ));
+                        UserX = user.getXloc();
+                        UserY = user.getYloc();
+                        UserZ = user.getZloc();
 
                         System.out.println("You are now at: " + user.getXloc() + ", " + user.getYloc() + ", " + user.getZloc());
                     }
