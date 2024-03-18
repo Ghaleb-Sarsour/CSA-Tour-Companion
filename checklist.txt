@@ -4,8 +4,9 @@
 -Enter ALL avalible Rooms at X and (y, -1, +1)
 
 
-String input
+int input
+String room
 Boolean inRoom
 
-Loop runs as long as input != exit
+Loop runs as long as input != 0
 
