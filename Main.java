@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.*;
 
 public class Main{
     public static void main(String[] args){
@@ -245,9 +246,43 @@ public class Main{
        
         //Adding user
         chara user = new chara();
+        int input = 1;
+        Scanner console = new Scanner(System.in);
 
-        calcPOS(room356, user);
+        //Main loop
+        System.out.println("Welcome to the IA tour companion!");
+        System.out.println("Input 0 at any time to exit the application\n");
+        System.out.println("Input 1 to enter a room");
+        do{
+            System.out.println("Which room do you want to go to?");
+            input = console.nextInt();
+            for(Classroom c : rooms){
+                if(c.getRoomNum() == input){
+                    calcPOS(c, user);
+
+                    System.out.println("Do you want to enter room " + c.getRoomNum() + "?: ");
+                    input = console.nextInt();
+                    if(input == 1){
+                        System.out.println("Room " +c.getRoomNum() + " is the " + c.getDescription() + " room and is taught by: " + c.getTeacher());
+                       
+                        //Replace name of room with the rooms numbers of rooms
+                        //If input == Hangar
+                            //Run Hangar Interaction
+                        //else if input == Engineering
+                            //Run Engineering Interaction
+                        //else if input == Exchange 2nd Floor
+                            //Run Exchange 2nd Floor Interaction
+                        //else if input == Physics
+                            //Run Physics Interaction       
+                    }
+
+                }
+            }
+        }while(input != 0);
     }
+
+
+
 
     //calculating POS
     public static void calcPOS(Classroom room, chara user){
