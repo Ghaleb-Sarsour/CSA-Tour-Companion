@@ -1,7 +1,43 @@
 import java.util.ArrayList;
 import java.util.*;
+import javax.swing.*;
+import java.awt.*;
 
 public class Main{
+
+    public static void JFramePhysics(){
+        JFrame frame = new JFrame();
+        ImageIcon icon = new ImageIcon("Physics.jpg.jpeg");
+        JLabel label = new JLabel(icon);
+        frame.getContentPane().add(label, BorderLayout.CENTER);
+        frame.setSize(400, 300);
+        frame.setVisible(true);
+    }
+    public static void JFrameEngineering(){
+        JFrame frame = new JFrame();
+        ImageIcon icon = new ImageIcon("Engineering.jpg.jpeg");
+        JLabel label = new JLabel(icon);
+        frame.getContentPane().add(label, BorderLayout.CENTER);
+        frame.setSize(400, 300);
+        frame.setVisible(true);
+    }
+    public static void JFrameHangar(){
+        JFrame frame = new JFrame();
+        ImageIcon icon = new ImageIcon("Hangar.jpg.jpeg");
+        JLabel label = new JLabel(icon);
+        frame.getContentPane().add(label, BorderLayout.CENTER);
+        frame.setSize(400, 300);
+        frame.setVisible(true);
+    }
+    public static void JFrameExchange_Hangar(){
+        JFrame frame = new JFrame();
+        ImageIcon icon = new ImageIcon("exchange:Hangar2.jpg.jpeg");
+        JLabel label = new JLabel(icon);
+        frame.getContentPane().add(label, BorderLayout.CENTER);
+        frame.setSize(400, 300);
+        frame.setVisible(true);
+    }
+
     public static void main(String[] args){
         //1st floor rooms
         Classroom room1881 = new Classroom(188, 1, "Denato", -6, 2, "Engineeering Room");
@@ -248,6 +284,7 @@ public class Main{
         chara user = new chara();
         int input = 1;
         Scanner console = new Scanner(System.in);
+        int roomNumI;
 
         //Main loop
         System.out.println("Welcome to the IA tour companion!");
@@ -256,6 +293,7 @@ public class Main{
         do{
             System.out.println("Which room do you want to go to?");
             input = console.nextInt();
+            roomNumI = input;
             for(Classroom c : rooms){
                 if(c.getRoomNum() == input){
                     calcPOS(c, user);
@@ -264,16 +302,24 @@ public class Main{
                     input = console.nextInt();
                     if(input == 1){
                         System.out.println("Room " +c.getRoomNum() + " is the " + c.getDescription() + " room and is taught by: " + c.getTeacher());
-                       
-                        //Replace name of room with the rooms numbers of rooms
-                        //If input == Hangar
-                            //Run Hangar Interaction
+                        
+                        if(roomNumI == 144 || roomNumI == 113){
+                            JFrameHangar();
+                            //Hangaer interaction
+                        }
                         //else if input == Engineering
+                        else if(roomNumI == 188 || roomNumI ==184 || roomNumI == 189 || roomNumI == 187 || roomNumI == 181){
+                            JFrameEngineering();
                             //Run Engineering Interaction
-                        //else if input == Exchange 2nd Floor
+                        }
+                        else if(roomNumI == 210){
+                            JFrameExchange_Hangar();
                             //Run Exchange 2nd Floor Interaction
-                        //else if input == Physics
-                            //Run Physics Interaction       
+                        }
+                        else if (roomNumI == 367 || roomNumI == 363){
+                            JFramePhysics();
+                            //Run Physics Interaction    
+                        }   
                     }
 
                 }
@@ -392,7 +438,6 @@ public class Main{
             System.out.println("You are now at: " + user.getXloc() + ", " + user.getYloc() + ", " + user.getZloc());
 
         }
-
     }
 }   
 
