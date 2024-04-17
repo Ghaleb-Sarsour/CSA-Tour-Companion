@@ -289,7 +289,7 @@ public class Main{
                         }
                         else if(roomNumI == 188 || roomNumI ==184 || roomNumI == 189 || roomNumI == 187 || roomNumI == 181){
                             enginnering.start();
-                            //Run Engineering Interaction
+                            //Engineering Interaction
                             System.out.print("Enter any number to exit: ");
                             input = console.nextInt();
                         }
@@ -302,7 +302,7 @@ public class Main{
                         }
                         else if (roomNumI == 367 || roomNumI == 363){
                             physics.start();
-                            //Engineering Interaction
+                            //Physics Interaction
                             System.out.print("Enter any number to exit: ");
                             input = console.nextInt();
                         }   
