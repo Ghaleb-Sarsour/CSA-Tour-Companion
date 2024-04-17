@@ -4,41 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Main{
-
-    public static void JFramePhysics(){
-        JFrame frame = new JFrame();
-        ImageIcon icon = new ImageIcon("Physics.jpg.jpeg");
-        JLabel label = new JLabel(icon);
-        frame.getContentPane().add(label, BorderLayout.CENTER);
-        frame.setSize(400, 300);
-        frame.setVisible(true);
-    }
-    public static void JFrameEngineering(){
-        JFrame frame = new JFrame();
-        ImageIcon icon = new ImageIcon("Engineering.jpg.jpeg");
-        JLabel label = new JLabel(icon);
-        frame.getContentPane().add(label, BorderLayout.CENTER);
-        frame.setSize(400, 300);
-        frame.setVisible(true);
-    }
-    public static void JFrameHangar(){
-        JFrame frame = new JFrame();
-        ImageIcon icon = new ImageIcon("Hangar.jpg.jpeg");
-        JLabel label = new JLabel(icon);
-        frame.getContentPane().add(label, BorderLayout.CENTER);
-        frame.setSize(400, 300);
-        frame.setVisible(true);
-    }
-    public static void JFrameExchange_Hangar(){
-        JFrame frame = new JFrame();
-        ImageIcon icon = new ImageIcon("exchange:Hangar2.jpg.jpeg");
-        JLabel label = new JLabel(icon);
-        frame.getContentPane().add(label, BorderLayout.CENTER);
-        frame.setSize(400, 300);
-        frame.setVisible(true);
-    }
-
-    public static void main(String[] args){
+       public static void main(String[] args){
         //1st floor rooms
         Classroom room1881 = new Classroom(188, 1, "Denato", -6, 2, "Engineeering Room");
         Classroom room1841 = new Classroom(184, 1, "Dr. P", -5, 2, "Engineeering Room");
@@ -107,7 +73,7 @@ public class Main{
         Classroom makerSpace = new Classroom(232, 2, "Ms. Beam", 1, -1, "Makerspace");
         Classroom gameDesign1 = new Classroom(236, 2, "Coach Heying", 2, -1, "Game Design Lab");
         Classroom gameDesign2 = new Classroom(236, 2, "Coach Heying", 3, -1, "Game Design Lab");
-        Classroom networkingLab1 = new Classroom(252, 2, "Mr. Wimdann", 4, -1, "Networking Lab");
+        Classroom networkingLab1 = new Classroom(252, 2, "Mr. Widmann", 4, -1, "Networking Lab");
         Classroom room223 = new Classroom(223, 2, "", -2, -2, "Classroom");
         Classroom room233 = new Classroom(233, 2, "Mr. Kuhn", 1, -2, "Classroom");
         Classroom room235 = new Classroom(235, 2, "", 2, -2, "Classroom");
@@ -285,6 +251,17 @@ public class Main{
         int input = 1;
         Scanner console = new Scanner(System.in);
         int roomNumI;
+        
+        //Image Icons
+        ImageIcon iconEng = new ImageIcon("Engineering.jpg.jpeg");
+        ImageIcon iconPhysics = new ImageIcon("Physics.jpg.jpeg");
+        ImageIcon iconExchange = new ImageIcon("exchange:Hangar2.jpg.jpeg");
+        ImageIcon iconHangar = new ImageIcon("Hangar.jpg.jpeg");
+        //Images
+        Images enginnering = new Images(iconEng);
+        Images physics = new Images(iconPhysics);
+        Images exchange = new Images(iconExchange);
+        Images hangar = new Images(iconHangar);
 
         //Main loop
         System.out.println("Welcome to the IA tour companion!");
@@ -301,27 +278,39 @@ public class Main{
                     System.out.println("Do you want to enter room " + c.getRoomNum() + "?: ");
                     input = console.nextInt();
                     if(input == 1){
-                        System.out.println("Room " +c.getRoomNum() + " is the " + c.getDescription() + " room and is taught by: " + c.getTeacher());
+                        System.out.println("Room " + c.getRoomNum() + " is the " + c.getDescription() + " room and is taught by: " + c.getTeacher());
+                        
                         
                         if(roomNumI == 144 || roomNumI == 113){
-                            JFrameHangar();
-                            //Hangaer interaction
+                            hangar.start();
+                            //Hangar interaction
+                            System.out.print("Enter any number to exit: ");
+                            input = console.nextInt();
                         }
-                        //else if input == Engineering
                         else if(roomNumI == 188 || roomNumI ==184 || roomNumI == 189 || roomNumI == 187 || roomNumI == 181){
-                            JFrameEngineering();
+                            enginnering.start();
                             //Run Engineering Interaction
+                            System.out.print("Enter any number to exit: ");
+                            input = console.nextInt();
                         }
+                        
                         else if(roomNumI == 210){
-                            JFrameExchange_Hangar();
-                            //Run Exchange 2nd Floor Interaction
+                            exchange.start();
+                            //Exchange Interaction
+                            System.out.print("Enter any number to exit: ");
+                            input = console.nextInt();
                         }
                         else if (roomNumI == 367 || roomNumI == 363){
-                            JFramePhysics();
-                            //Run Physics Interaction    
+                            physics.start();
+                            //Engineering Interaction
+                            System.out.print("Enter any number to exit: ");
+                            input = console.nextInt();
                         }   
                     }
-
+                   hangar.quit();
+                   enginnering.quit();
+                   exchange.quit(); 
+                   hangar.quit();
                 }
             }
         }while(input != 0);
@@ -439,5 +428,4 @@ public class Main{
 
         }
     }
-}   
-
+} 
