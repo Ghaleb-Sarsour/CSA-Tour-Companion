@@ -255,7 +255,7 @@ public class Main{
         //Image Icons
         ImageIcon iconEng = new ImageIcon("Engineering.jpg.jpeg");
         ImageIcon iconPhysics = new ImageIcon("Physics.jpg.jpeg");
-        ImageIcon iconExchange = new ImageIcon("exchange:Hangar2.jpg.jpeg");
+        ImageIcon iconExchange = new ImageIcon("exchange.jpg.jpeg");
         ImageIcon iconHangar = new ImageIcon("Hangar.jpg.jpeg");
         //Images
         Images enginnering = new Images(iconEng);
