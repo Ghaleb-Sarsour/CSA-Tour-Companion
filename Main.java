@@ -245,7 +245,40 @@ public class Main{
         rooms.add(room346);
         rooms.add(room359);
         rooms.add(room356);
-       
+
+        String[] Hangerobs = new String[]{"Table", "Chairs", "Round Tables", "Lunchlines", "Tall Tables"};
+        hangar1.setObjectsList(Hangerobs);
+        hangar2.setObjectsList(Hangerobs);
+
+        String[] Engineeringobs = new String[]{"Tables", "3D Printers", "Toolbox", "Sanders", "Drills"};
+        room1881.setObjectsList(Engineeringobs);
+        room1882.setObjectsList(Engineeringobs);
+        room1883.setObjectsList(Engineeringobs);
+        room1841.setObjectsList(Engineeringobs);
+        room1842.setObjectsList(Engineeringobs);
+        room1843.setObjectsList(Engineeringobs);
+        room1891.setObjectsList(Engineeringobs);
+        room1892.setObjectsList(Engineeringobs);
+        room1871.setObjectsList(Engineeringobs);
+        room1872.setObjectsList(Engineeringobs);
+        room1811.setObjectsList(Engineeringobs);
+        room1812.setObjectsList(Engineeringobs);
+
+        String[] exchangeobs = new String[]{"Books", "Printers", "Tables", "Bay Pods", "TVs"};
+        exchange1.setObjectsList(exchangeobs);
+        exchange2.setObjectsList(exchangeobs);
+        exchange3.setObjectsList(exchangeobs);
+        exchange4.setObjectsList(exchangeobs);
+
+        String[] mathobs = new String[]{"Pencils", "Calculators", "Whiteboard", "Laptops", "Chairs"};
+        room367.setObjectsList(mathobs);
+        room363.setObjectsList(mathobs);
+        room331.setObjectsList(mathobs);
+
+        String[] cyberobs = new String[]{"Laptops", "routers", "switches", "monitors", "Cybersecurity Equipment"};
+        cyberLab1.setObjectsList(cyberobs);
+
+
         //Adding user
         chara user = new chara();
         int input = 1;
@@ -279,32 +312,53 @@ public class Main{
                     input = console.nextInt();
                     if(input == 1){
                         System.out.println("Room " + c.getRoomNum() + " is the " + c.getDescription() + " room and is taught by: " + c.getTeacher());
-                        
-                        
-                        if(roomNumI == 144 || roomNumI == 113){
+                        System.out.print("Room " + c.getRoomNum() + " contains: "); 
+                        c.getObjects();
+                        System.out.println("");
+                
+                        if(roomNumI == 113){
                             hangar.start();
                             //Hangar interaction
+                            HangarLunch();
                             System.out.print("Enter any number to exit: ");
                             input = console.nextInt();
                         }
                         else if(roomNumI == 188 || roomNumI ==184 || roomNumI == 189 || roomNumI == 187 || roomNumI == 181){
+                            //Image
                             enginnering.start();
                             //Engineering Interaction
+                            engineeringToolsQuiz();
                             System.out.print("Enter any number to exit: ");
-                            input = console.nextInt();
-                        }
-                        
+                            input = console.nextInt();    
+                        } 
                         else if(roomNumI == 210){
+                            //Image
                             exchange.start();
-                            //Exchange Interaction
                             System.out.print("Enter any number to exit: ");
                             input = console.nextInt();
                         }
                         else if (roomNumI == 367 || roomNumI == 363){
+                            //Image
                             physics.start();
-                            //Physics Interaction
                             System.out.print("Enter any number to exit: ");
                             input = console.nextInt();
+                        }
+                        else if (roomNumI == 331){
+                            //Image
+                            //Math interaction
+                            int randnum = generateRandomNumber();
+                            guessTheNumber(randnum, 1);  
+                            System.out.print("Enter any number to exit: ");
+                            input = console.nextInt();
+
+                        }
+                        else if(roomNumI == 258){
+                            //Image
+                            //Cyber Interaction
+                            cyberQuiz();
+                            System.out.print("Enter any number to exit: ");
+                            input = console.nextInt();
+
                         }   
                     }
                    hangar.quit();
@@ -321,7 +375,7 @@ public class Main{
 
     //calculating POS
     public static void calcPOS(Classroom room, chara user){
-
+        
         //Setting Stairs
         stairs stair1 = new stairs("Stair One", -3, 2, 1, -6, 2, 2, -5, 2, 3);
         stairs stair2 = new stairs("Stair Two", 4, 2, 1, 6, 2, 2, 6, 2, 3);
@@ -428,4 +482,140 @@ public class Main{
 
         }
     }
-} 
+
+
+    public static int generateRandomNumber() {
+        return new Random().nextInt(100) + 1; 
+    }
+
+    public static void guessTheNumber(int randomNumber, int guessCount) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Guess #" + guessCount + ": Enter a number between 1 and 100:");
+        int guess = scanner.nextInt();
+
+        if (guess == randomNumber) {
+            System.out.println("Congratulations! You guessed the number in " + guessCount + " tries.");
+        } 
+        else if (guess > randomNumber) {
+            System.out.println("Too high. Try again.");
+            guessTheNumber(randomNumber, guessCount + 1);
+        }
+        else {
+            System.out.println("Too low. Try again.");
+            guessTheNumber(randomNumber, guessCount + 1);
+        }
+    }
+
+    public static void cyberQuiz(){
+        int correct = 0;
+        int ans;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Test your Cybersecurity Knowledge!");
+
+        System.out.println("Question 1: What is the most common cyber attack? ");
+        System.out.print("1. Malware\n 2. Phishing\n 3.Viruses\n 4.DDoS \n Answer: ");
+        ans = scanner.nextInt();
+        if(ans == 2){
+            correct++;
+        }
+
+        System.out.println("Question 2: What type of attack exploits an unsecured SMTP server? ");
+        System.out.print("1. Worm\n 2. Rootkit\n 3. Phising\n 4. Open SMTP relay\n Answer: ");
+        ans = scanner.nextInt();
+        if(ans == 4){
+            correct++;
+        }
+
+        System.out.println("Question 3: What is a trojan? ");
+        System.out.print("1. A type of worm\n 2. A virus disguised as a legitimate app\n 3. A historical statue\n 4. A type of DDoS attack vector\n Answer: ");
+        ans = scanner.nextInt();
+        if(ans == 2){
+            correct++;
+        }
+
+        System.out.println("Question 4: What is hacking without writing any lines of code? ");
+        System.out.print("1. virus\n 2. XSS\n 3. Social Engineering\n 4. Roblox Malicious Internal Manipulation\n Answer: ");
+        ans = scanner.nextInt();
+        if(ans == 3){
+            correct++;
+        }
+
+        System.out.println("Question 5: Which of these attacks have the highest permissions on a system? ");
+        System.out.print("1. Rootkit\n 2. Admin Portal\n 3. DDoS\n 4. Keylogger\n Answer: ");
+        ans = scanner.nextInt();
+        if(ans == 1){
+            correct++;
+        }
+
+        System.out.println("You finished the quiz!");
+        System.out.println("Your score is " + correct + "/5");
+    }
+
+    public static void engineeringToolsQuiz() {
+        Scanner scanner = new Scanner(System.in);
+        int ans;
+        int score = 0;
+
+        System.out.println("What is the primary function of a multimeter?");
+        System.out.print("1. Measure voltage, current, and resistance\n 2. Measure temperature\n 3. Measure power\n Enter your answer (a, b, or c): ");
+        ans = scanner.nextInt();
+        if (ans == 1) {
+            score++;
+        }
+
+        System.out.println("\nWhat is the purpose of a soldering iron?");
+        System.out.println("1. To cut wires\n 2. To join electrical components\n 3. To measure resistance\n Answer: ");
+        ans = scanner.nextInt();
+        if (ans == 2) {
+            score++;
+        }
+
+
+        System.out.println("\nWhat is the function of a caliper?");
+        System.out.println("1. To measure voltage\n 2. To measure length, width, and depth\n 3. To measure resistance\n Answer: ");
+        ans = scanner.nextInt();
+        if (ans == 2) {
+            score++;
+        }
+
+        System.out.println("\nWhat is the purpose of a torque wrench?");
+        System.out.print("1. To measure current\n 2. To tighten nuts and bolts to a specific force\n 3. To cut wires\n Answer: ");
+        ans = scanner.nextInt();
+        if (ans == 2) {
+            score++;
+        }
+
+        System.out.println("\nWhat is the function of a micrometer?");
+        System.out.print("1. To measure voltage\n 2. To measure resistance\n 3. To measure small distances with high precision\n Answer: ");
+        ans = scanner.nextInt();
+        if (ans == 3) {
+            score++;
+        }
+
+        System.out.println("\n Your final score is: " + score + "/5");
+    }
+
+    public static void HangarLunch(){
+        int choice;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Welcome to the IA Lunch Menu!");
+        do{
+        System.out.println("Which lunch line do you want to view?");
+        System.out.print("1. Main Lines\n 2. Salad Bar\n 3. Side Line\n 4. Exit\n Choice: ");
+        choice = scanner.nextInt();
+        if (choice == 1){
+            System.out.println("The two main lines have many different foods depending on the day, such as fried chicken, pasta, rice, and more.");
+        }
+        else if(choice == 2){
+            System.out.println("The salad bar is not open every single day. It allows you to make your own custom salad using any of the food items given.");
+        }
+        else if(choice == 3){
+            System.out.println("The side line is hidden from the main group of students and usually has a much shorter line. This line is also more consistant in terms of avalible food. Some food offered includes chicken sandwiches, hamburgers, chicken nuggets, and chicken strips.");
+        }
+
+    }while(choice != 4);
+
+    }
+    
+}
+

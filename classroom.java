@@ -7,7 +7,7 @@ class Classroom{
     private int xCoordinate;
     private int yCoordinate;
     private String description;
-    private ArrayList<classObjects> objects;
+    private String[] objects;
 
     public Classroom(int roomNumber, int floor, String teacher, int xCoordinate, int yCoordinate, String description){
         this.roomNumber = roomNumber;
@@ -16,7 +16,7 @@ class Classroom{
         this.xCoordinate = xCoordinate;
         this.yCoordinate = yCoordinate;
         this.description = description;
-        this.objects = new ArrayList<>();
+        this.objects = new String[5];
     }
 
     public int getRoomNum(){
@@ -43,11 +43,14 @@ class Classroom{
         return description;
     }
 
-    public void addObject(classObjects object){
-        objects.add(object);
+    public void getObjects(){
+        for(String i:objects){
+            System.out.print(i + " ");
+        }
+        
     }
-    
-    public ArrayList<classObjects> getObjects(){
-        return objects;
+
+    public void setObjectsList(String[] objects){
+        this.objects = objects;
     }
 }

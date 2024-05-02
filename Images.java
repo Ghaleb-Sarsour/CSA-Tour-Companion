@@ -9,7 +9,7 @@ public class Images{
     frame = new JFrame();
     JLabel label = new JLabel(icon);
     frame.getContentPane().add(label, BorderLayout.CENTER);
-    frame.setSize(400, 300);
+    frame.setSize(1280, 720);
    }
 
    public void start(){
